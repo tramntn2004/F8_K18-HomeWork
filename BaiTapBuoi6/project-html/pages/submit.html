@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Trang Gửi Form - POST</h1>
+
+  <p>
+    Trang này giúp bạn thử nghiệm cách gửi dữ liệu bằng <strong>phương thức POST</strong>.  
+    Khác với GET, dữ liệu <em>không hiển thị trên thanh địa chỉ</em>.  
+    Khi nhấn <mark>Gửi</mark>, toàn bộ dữ liệu sẽ được gửi đến địa chỉ <small>API Gateway</small> qua POST.
+  </p>
+
+  <form action="https://api-gateway.fullstack.edu.vn/action_page.php" method="post">
+    <!-- Họ tên -->
+    <div>
+      <label for="fullname"><strong>Họ tên:</strong></label><br>
+      <input 
+        type="text" 
+        id="fullname" 
+        name="fullname" 
+        placeholder="Nhập họ tên" 
+        value="Nguyễn Văn A" 
+        required>
+    </div>
+    <br>
+
+    <!-- Email -->
+    <div>
+      <label for="email"><strong>Email:</strong></label><br>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        placeholder="Nhập email (phải có @)" 
+        required>
+    </div>
+    <br>
+
+    <!-- Mật khẩu -->
+    <div>
+      <label for="password"><strong>Mật khẩu:</strong></label><br>
+      <input 
+        type="password" 
+        id="password" 
+        name="password" 
+        placeholder="Nhập mật khẩu" 
+        required>
+    </div>
+    <br>
+
+    <!-- Tuổi -->
+    <div>
+      <label for="age"><strong>Tuổi (tùy chọn):</strong></label><br>
+      <input 
+        type="number" 
+        id="age" 
+        name="age" 
+        placeholder="Nhập tuổi">
+    </div>
+    <br>
+
+    <!-- Select danh mục -->
+    <div>
+      <label for="category"><strong>Danh mục:</strong></label><br>
+      <select id="category" name="category" required>
+        <option>Chưa chọn</option> <!-- không có value -->
+        <option value="student">Học viên</option>
+        <option value="teacher">Giảng viên</option>
+      </select>
+    </div>
+    <br>
+
+    <!-- Nút gửi -->
+    <input type="submit" value="Gửi">
+  </form>
+
+  <hr>
+
+  <h2>🧪 Hướng dẫn kiểm thử</h2>
+  <ul>
+    <li>Nhập đầy đủ thông tin rồi nhấn <strong>Gửi</strong>.</li>
+    <li>Dữ liệu sẽ được gửi bằng <code>POST</code> đến trang đích, <em>không hiển thị trên URL</em>.</li>
+    <li>Nếu email không có ký tự <b>@</b> → trình duyệt sẽ chặn gửi.</li>
+    <li>Nếu chọn “Chưa chọn” (không có value) → form gửi text “Chưa chọn”.</li>
+    <li>Nếu chọn “Học viên” hoặc “Giảng viên” → form gửi value tương ứng (student / teacher).</li>
+    <li>Nếu bỏ <code>name</code> trong input nào → trường đó sẽ <strong>không được gửi</strong>.</li>
+  </ul>
+
+  <p><a href="../index.html">⬅ Quay lại trang chủ</a></p>
+</body>
+</html>

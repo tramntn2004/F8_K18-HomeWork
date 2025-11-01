@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+   <h1>Phòng thí nghiệm - Form GET</h1>
+
+  <p>
+    Trang này giúp bạn thử nghiệm cách gửi dữ liệu qua <strong>phương thức GET</strong>.  
+    Khi nhấn <em>Submit</em>, hãy quan sát thanh địa chỉ (URL) để xem các tham số được gửi đi.  
+    Ví dụ: <mark>?q=html&level=beginner&mode=online&source=lab</mark>
+  </p>
+   <form method="GET" action="lab.html">
+    <div>
+      <label for="search">Từ khóa tìm kiếm:</label><br>
+      <input type="text" id="search" name="q" placeholder="Tìm kiếm...">
+    </div>
+    <br>
+    <fieldset>
+      <legend><strong>Trình độ:</strong></legend>
+      <label for="beginner">
+        <input type="checkbox" id="beginner" name="level" value="beginner"> Beginner
+      </label><br>
+
+      <label for="intermediate">
+        <input type="checkbox" id="intermediate" name="level" value="intermediate"> Intermediate
+      </label><br>
+
+      <label for="advanced">
+        <input type="checkbox" id="advanced" name="level" value="advanced"> Advanced
+      </label>
+    </fieldset>
+    <br>
+     <fieldset>
+      <legend><strong>Hình thức học:</strong></legend>
+      <label for="online">
+        <input type="radio" id="online" name="mode" value="online"> Online
+      </label><br>
+
+      <label for="offline">
+        <input type="radio" id="offline" name="mode" value="offline"> Offline
+      </label>
+    </fieldset>
+    <br>
+      <div>
+      <label for="category"><strong>Danh mục:</strong></label><br>
+      <select id="category" name="category">
+        <option value="">-- Chọn danh mục --</option>
+        <option value="frontend">Frontend</option>
+        <option value="backend">Backend</option>
+        <option value="devops">DevOps</option>
+        <option value="datascience">Data Science</option>
+      </select>
+    </div>
+    <br>
+     <input type="hidden" name="source" value="lab">
+     <button type="submit">Gửi dữ liệu</button>
+    <button type="reset">Làm lại</button>
+  </form>
+
+  <hr>
+
+  <h2>📋 Hướng dẫn kiểm tra kết quả</h2>
+  <ol>
+    <li>Nhập từ khóa bất kỳ vào ô tìm kiếm.</li>
+    <li>Chọn một hoặc nhiều trình độ (checkbox).</li>
+    <li>Chọn hình thức học (radio).</li>
+    <li>Chọn danh mục trong danh sách.</li>
+    <li>Nhấn <strong>Gửi dữ liệu</strong>.</li>
+    <li>Quan sát URL trên trình duyệt, ví dụ:<br>
+      <code>lab.html?q=python&level=beginner&level=advanced&mode=online&category=backend&source=lab</code>
+    </li>
+  </ol>
+
+  <p><a href="../index.html">Quay lại trang chủ</a></p>
+</body>
+</html>

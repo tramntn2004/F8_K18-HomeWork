@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+   <h1>Liên hệ & Nội dung Nhúng</h1>
+
+  <p>
+    Trang này minh họa cách <strong>nhúng nội dung đa phương tiện</strong> từ nhiều nguồn khác nhau:  
+    bao gồm video <em>nội bộ</em> (.mp4), video <em>bên thứ ba</em> (YouTube),  
+    và bản đồ <mark>Google Maps</mark> để định vị.
+  </p>
+
+  <h2>🎬 Video từ YouTube</h2>
+  <iframe 
+    width="560" 
+    height="315"
+    src="https://www.youtube.com/embed/UB1O30fR-EE" 
+    title="Video học HTML cơ bản"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+  </iframe>
+
+  <h2>🗺️ Bản đồ Google Maps</h2>
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.466134545532!2d106.70042317593653!3d10.776888289372776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3b3e7b2a27%3A0xa77b2d93ab07a3f5!2zVGjDoG5oIFBo4bqhbSBNaeG7hW4gUXXhuq1jIFRQLiBI4buTIENNSCBUUC4gU8OgaSBHw6AgUXXhuq1j!5e0!3m2!1svi!2s!4v1700000000000!5m2!1svi!2s" 
+    width="560" 
+    height="315"
+    style="border:0;"
+    allowfullscreen 
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    title="Vị trí Google Maps - Thành phố Hồ Chí Minh">
+  </iframe>
+
+  <h2>📁 Video nội bộ (mp4)</h2>
+  <iframe 
+    width="560" 
+    height="315" 
+    src="../assets/videos/intro.mp4"
+    title="Video giới thiệu nội bộ"
+    allow="autoplay; encrypted-media">
+  </iframe>
+
+  <h2>📘 Giải thích sự khác nhau</h2>
+  <p>
+    Video <strong>nội bộ</strong> (định dạng <em>.mp4</em>) được lưu trực tiếp trong thư mục của website,  
+    sử dụng <mark>đường dẫn tương đối</mark> để hiển thị. Loại này giúp website hoạt động độc lập,  
+    không phụ thuộc vào Internet hoặc bên thứ ba, nhưng sẽ làm <small>tăng dung lượng trang</small>.  
+  </p>
+
+  <p>
+    Ngược lại, nội dung <strong>bên thứ ba</strong> như <em>YouTube</em> hoặc <em>Google Maps</em>  
+    được nhúng thông qua <code>&lt;iframe&gt;</code> có <mark>đường dẫn tuyệt đối</mark> (URL online).  
+    Điều này giúp tiết kiệm dung lượng máy chủ và cập nhật nội dung theo thời gian thực,  
+    tuy nhiên sẽ cần kết nối mạng để hiển thị.
+  </p>
+
+  <p><a href="../index.html">⬅ Quay lại trang chủ</a></p>
+</body>
+</html>
