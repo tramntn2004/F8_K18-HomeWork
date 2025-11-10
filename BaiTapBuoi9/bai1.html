@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài tập 1</title>
+  <style>
+    h1 {
+      background-color: orange;
+      color: white;
+    }
+    input[id='light']:checked + label {
+      background-color: #fff8cc;
+      color: gray;
+    }
+    input[id='light']:checked ~ .theme_light {
+      background-color: #fff8cc;
+      color: gray;
+    }
+    input[id='dark']:checked + label {
+      background-color: #111827;
+      color: gray;
+    }
+    input[id='dark']:checked ~ .theme_dark {
+      background-color: #111827;
+      color: gray;
+    }
+    input[id='red']:checked + label {
+      background-color: red;
+    }
+    input[id='red']:checked ~ .color_red {
+      background-color: red;
+    }
+    input[id='blue']:checked + label {
+      background-color: blue;
+    }
+    input[id='blue']:checked ~ .color_blue {
+      background-color: blue;
+    }
+    input[id='green']:checked + label {
+      background-color: green;
+    }
+    input[id='green']:checked ~ .color_green {
+      background-color: green;
+    }
+    input[id='vi']:checked + label {
+      background-color: #bbf7d0;
+    }
+    input[id='vi']:checked ~ .lang_vi {
+      background-color: #bbf7d0;
+    }
+    input[id='en']:checked + label {
+      background-color: #bbf7d0;
+    }
+    input[id='en']:checked ~ .lang_en {
+      background-color: #bbf7d0;
+    }
+    input[id='showEnhanceDes']:checked + label {
+      background-color: #bbf7d0;
+    }
+    input[id='showEnhanceDes']:checked ~ .show_enhance_des {
+      background-color: #bbf7d0;
+    }
+    input[id='eco']:checked + label {
+      background-color: #bbf7d0;
+    }
+    input[id='eco']:checked ~ .eco_mode {
+      background-color: #bbf7d0;
+    }
+    input[id='showWarm']:checked + label {
+      background-color: #bbf7d0;
+    }
+    input[id='showWarm']:checked ~ .show_warm {
+      background-color: #bbf7d0;
+    }
+     </style>
+</head>
+<body>
+  <h1>Trung tâm cấu hình giao diện (Demo)</h1>
+  <p>Chọn giao diện (Theme): </p>
+  <input type="radio" name="theme" id="light">
+  <label for ="light">Light</label>
+  <input type="radio" name="theme" id="dark">
+  <label for ="dark">Dark</label>
+  <p>Chọn màu chủ đạo (Color): </p>
+  <input type="radio" name="color" id="red">
+  <label for ="red">Red</label>
+  <input type="radio" name="color" id="blue">
+  <label for ="blue">Blue</label>
+  <input type="radio" name="color" id="green">
+  <label for ="green">Green</label>
+  <p>Chọn ngôn ngữ (Language): </p>
+  <input type="radio" name="language" id="vi">
+  <label for="vi">VI</label>
+  <input type="radio" name="language" id="en">
+  <label for="en">EN</label>
+  <p>Tùy chọn bổ sung (Option - Checkbox): </p>
+  <input type="checkbox" id="showEnhanceDes">
+  <label for="showEnhanceDes">Hiển thị mô tả nâng cao</label>
+  <input type="checkbox" id="eco">
+  <label for="eco">Bật chế độ Eco</label>
+  <input type="checkbox" id="showWarm">
+  <label for="showWarm">Hiển thị cảnh báo quan trọng</label>
+
+  <p class="theme_light">Theme Light: Giao diện sáng. chữ đen</p>
+  <p class="theme_dark">Theme Dark: Giao diện tốt, chữ sáng</p>
+  <p class="color_red">Màu Red: được nhấn mạnh khi chọn Red</p>
+  <p class="color_blue">Màu Blue: được nhấn mạnh khi chọn Blue</p>
+  <p class="color_green">Màu Green: được nhấn mạnh khi chọn Green</p>
+  <p class="lang_vi">[VI] Xin chào bạn! Khi chọn VI, dòng này rõ hơn</p>
+  <p class="lang_en">[EN] Hello, world! Khi chọn EN, dòng này rõ hơn</p>
+  <p class="show_enhance_des">Mô tả nâng cao: giải thích kux hơn về cách các lựa chọn đang ảnh hưởng giao diện.</p>
+  <p class="eco_mode">Chế độ Eco: mô phỏng trạng thái tiết kiệm tài nguyên cho giao diện</p>
+  <p class="show_warm">Cảnh báo quan trọng: khu vực dùng để nhấn mạnh thông tin hệ thống.</p>
+</body>
+</html>
