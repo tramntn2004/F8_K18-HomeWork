@@ -1,0 +1,354 @@
+
+body {
+  background-image: url("https://images.unsplash.com/photo-1579547621706-1a9c79d5c9f1?q=80&w=2070&auto=format&fit=crop");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+
+
+.sub-title {
+  margin-top: 30px;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.main-title {
+  color: #c084fc;
+}
+
+.desc {
+  font-size: 18px;
+  margin-top: 18px;
+  line-height: 1.5;
+}
+
+
+
+.btn {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.start-btn,
+.advise-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.start-btn {
+  background-color: #a855f7;
+  color: white;
+}
+
+.start-btn:hover {
+  background-color: #9333ea;
+}
+
+.advise-btn {
+  background-color: #f05123;
+  color: white;
+}
+
+
+
+.logo {
+  margin-top: 35px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid rgba(192,132,252,0.6);
+}
+
+.logo-desc {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.number {
+  color: #8e38e5;
+}
+
+
+
+.check-box {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.conclusion {
+  padding: 15px;
+  border-radius: 4px;
+  background-color: aliceblue;
+  margin-top: 20px;
+}
+
+.reminder-title {
+  font-weight: bold;
+}
+
+
+
+.end-part {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+
+.end-part div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.end-part img {
+  width: 20px;
+}
+
+
+
+#modal-toggle {
+  display: none;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: none;
+  z-index: 90;
+}
+
+#modal-toggle:checked ~ .modal-overlay {
+  display: block;
+}
+
+
+.modal {
+  width: 350px;
+  background: antiquewhite;
+  padding: 22px;
+  border-radius: 12px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 100;
+}
+
+#modal-toggle:checked ~ .modal {
+  display: block;
+}
+
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  gap: 10px;
+}
+
+.check-item img {
+  width: 18px;
+}
+
+.right-now-btn {
+  width: 100%;
+  background-color: #c084fc;
+  border: none;
+  padding: 10px 0;
+  border-radius: 8px;
+  margin-top: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+#advise {
+  display: none;
+}
+
+.advise-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: none;
+  z-index: 90;
+}
+
+#advise:checked ~ .advise-overlay {
+  display: block;
+}
+
+.advise-modal {
+  width: 420px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 100;
+}
+
+#advise:checked ~ .advise-modal {
+  display: block;
+}
+
+.modal-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.modal-sub {
+  margin-top: 5px;
+  text-align: center;
+  color: #444;
+}
+
+/* FORM */
+.form-box {
+  margin-top: 18px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.checkbox {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.submit-btn {
+  width: 100%;
+  background: #f05123;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 18px;
+}
+
+
+.tooltip-wrap {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  top: -35px;
+  left: 0;
+  background: #1e293b;
+  padding: 7px 10px;
+  color: white;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  display: none;
+}
+
+.tooltip-wrap:hover .tooltip {
+  display: block;
+}
+
+
+
+.faq {
+  width: 80%;
+  margin: 40px auto;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+.faq-checkbox {
+  display: none;
+}
+
+.faq-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 22px;
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 14px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.faq-item:hover {
+  background: rgba(192, 132, 252, 0.2);
+}
+
+.faq-icon::after {
+  content: "+";
+  font-size: 26px;
+}
+
+.faq-checkbox:checked + .faq-item .faq-icon::after {
+  content: "−";
+  font-size: 32px;
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 18px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 10px;
+  transition: max-height 0.35s ease;
+}
+
+.faq-checkbox:checked + .faq-item + .faq-content {
+  max-height: 300px;
+  padding: 18px;
+}
+

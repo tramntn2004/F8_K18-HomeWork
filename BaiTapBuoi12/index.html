@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F8 Modal Demo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="reset.css">
+</head>
+
+<body>
+
+  
+  <input type="checkbox" id="modal-toggle">
+  <input type="checkbox" id="advise">
+
+  <div class="container">
+
+    <p class="sub-title">
+      Bắt đầu hành trình <br>
+      <strong class="main-title">Học Lập Trình Tại F8</strong>
+    </p>
+
+    <p class="desc">
+      Từng bước làm chủ lập trình với hệ thống khóa học bài bản, lộ trình rõ ràng
+      và nội dung thực chiến bám sát nhu cầu doanh nghiệp. Học từ nền tảng tới nâng cao ngay trên F8.
+    </p>
+
+    <div class="btn">
+      <label for="modal-toggle" class="start-btn">Bắt đầu học miễn phí</label>
+      <label for="advise" class="advise-btn">Tư vấn ngay</label>
+    </div>
+
+    <img class="logo" src="https://files.fullstack.edu.vn/f8-prod/public-images/67c022029788c.png">
+    <p class="logo-desc">
+      Cùng học với hơn <b class="number">2.500+</b> học viên đang theo lộ trình tại F8
+    </p>
+
+    <label class="check-box">
+      <input type="checkbox"> Bật màu học tập tập trung
+    </label>
+
+    <div class="conclusion">
+      <p class="reminder-title">Lời khuyên khi học lập trình tại F8</p>
+      <p class="reminder">
+        Hãy bắt đầu với các khóa nền tảng như HTML, CSS và JavaScript trên F8,
+        xem video kết hợp làm bài tập và dự án nhỏ.
+      </p>
+    </div>
+
+    <div class="end-part">
+      <div class="end-part-1">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Sign-check-icon.png/960px-Sign-check-icon.png">
+        <p>Lộ trình học từ cơ bản tới nâng cao</p>
+      </div>
+
+      <div class="end-part-2">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Sign-check-icon.png/960px-Sign-check-icon.png">
+        <p>Bài tập, project thực tế theo từng khóa</p>
+      </div>
+
+      <div class="end-part-3">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Sign-check-icon.png/960px-Sign-check-icon.png">
+        <p>Cộng đồng F8 hỗ trợ hỏi đáp mỗi ngày</p>
+      </div>
+    </div>
+  </div>
+
+ 
+<label for="modal-toggle" class="overlay modal-overlay"></label>
+
+<div class="modal">
+    <label for="modal-toggle" class="close-btn">×</label>
+
+    <p class="name-1">Bắt đầu học lập trình miễn phí</p>
+    <p class="name-2">Học HTML, CSS, JavaScript + bài tập thực hành</p>
+
+    <div class="check-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Sign-check-icon.png/960px-Sign-check-icon.png">
+      <p>Khóa học cơ bản miễn phí</p>
+    </div>
+
+    <div class="check-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Sign-check-icon.png/960px-Sign-check-icon.png">
+      <p>Video chất lượng cao</p>
+    </div>
+
+    <div class="check-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Sign-check-icon.png/960px-Sign-check-icon.png">
+      <p>Lộ trình rõ ràng</p>
+    </div>
+
+    <div class="check-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Sign-check-icon.png/960px-Sign-check-icon.png">
+      <p>Không cần thẻ tín dụng</p>
+    </div>
+
+    <button class="right-now-btn">Bắt đầu ngay</button>
+</div>
+
+
+  
+  <label for="advise" class="overlay advise-overlay"></label>
+
+  <div class="advise-modal">
+    <label for="advise" class="close-btn">×</label>
+
+    <h2 class="modal-title">Đăng ký tư vấn</h2>
+    <p class="modal-sub">Điền thông tin để được tư vấn lộ trình học phù hợp</p>
+
+    <form class="form-box">
+
+      <div class="form-group tooltip-wrap">
+        <label>Họ và tên *</label>
+        <input type="text" placeholder="Nguyễn Văn A">
+        <span class="tooltip">Nhập họ và tên đầy đủ của bạn</span>
+      </div>
+
+      <div class="form-group tooltip-wrap">
+        <label>Số điện thoại *</label>
+        <input type="text" placeholder="0912345678">
+        <span class="tooltip">Số điện thoại giúp chúng tôi liên hệ bạn</span>
+      </div>
+
+      <div class="form-group tooltip-wrap">
+        <label>Email</label>
+        <input type="email" placeholder="example@gmail.com">
+        <span class="tooltip">Nhập email để nhận tư vấn qua mail</span>
+      </div>
+
+      <p class="list-title">Khóa học quan tâm *</p>
+
+      <label class="checkbox tooltip-wrap">
+        <input type="checkbox" checked> HTML & CSS
+        <span class="tooltip">Khóa nền tảng xây dựng giao diện web</span>
+      </label>
+
+      <label class="checkbox tooltip-wrap">
+        <input type="checkbox" checked> JavaScript
+        <span class="tooltip">JavaScript là ngôn ngữ lập trình cho web động</span>
+      </label>
+
+      <label class="checkbox tooltip-wrap">
+        <input type="checkbox" checked> Front-end lộ trình
+        <span class="tooltip">Lộ trình hoàn chỉnh trở thành Front-end Developer</span>
+      </label>
+
+      <label class="checkbox tooltip-wrap">
+        <input type="checkbox" checked> ReactJS
+        <span class="tooltip">ReactJS là thư viện JavaScript phổ biến nhất hiện nay</span>
+      </label>
+
+      <label class="checkbox tooltip-wrap">
+        <input type="checkbox" checked> Chưa rõ – cần tư vấn
+        <span class="tooltip">Chúng tôi sẽ tư vấn lộ trình phù hợp với bạn</span>
+      </label>
+
+      <button class="submit-btn">ĐĂNG KÝ TƯ VẤN NGAY</button>
+    </form>
+  </div>
+
+  <div class="faq">
+    <h2 class="faq-title">Câu hỏi thường gặp</h2>
+
+    <input type="checkbox" id="faq1" class="faq-checkbox">
+    <label for="faq1" class="faq-item">
+      <span class="faq-question">Tôi có thể ứng dụng được ngay sau khi học không?</span>
+      <span class="faq-icon"></span>
+    </label>
+    <div class="faq-content">
+      Chắc chắn rồi! F8 luôn hướng tới các bạn học đi đôi với hành. Vì thế, sau mỗi buổi học video hoặc văn bản, bạn sẽ được làm rất nhiều bài tập để cô đọng lại kiến thức, nắm vững cú pháp, thậm chí là làm một thử thách code mới. Quan trọng hơn hết, bạn phải làm xong các dự án thực chiến - được thiết kế bằng Figma thì mới hoàn thành khóa học nhé.
+    </div>
+
+    <input type="checkbox" id="faq2" class="faq-checkbox">
+    <label for="faq2" class="faq-item">
+      <span class="faq-question">Tôi có được hỗ trợ trong quá trình học không?</span>
+      <span class="faq-icon"></span>
+    </label>
+    <div class="faq-content">
+      Tất nhiên rồi! Mặc dù bài tập đã có hướng dẫn, video chữa bài tương ứng và được giải thích chi tiết nhất có thể nhưng nếu bạn gặp khó, bạn không cần lo lắng không biết hỏi ai hay không có người hướng dẫn. Tại mỗi bài học ở F8, bạn luôn có thể đặt câu hỏi, trao đổi và tương tác với các bạn cùng học. Ngoài ra, chuyên viên hỗ trợ F8 sẽ luôn tận tình hướng dẫn nếu bạn gặp khó khăn bạn nhé.
+    </div>
+
+    <input type="checkbox" id="faq3" class="faq-checkbox">
+    <label for="faq3" class="faq-item">
+      <span class="faq-question">Tôi muốn hỏi thì đăng câu hỏi ở đâu?</span>
+      <span class="faq-icon"></span>
+    </label>
+    <div class="faq-content">
+      Tại mỗi bài học luôn có phần đăng câu hỏi. Bạn chỉ cần đăng câu hỏi mới và chờ câu trả lời của đội ngũ hỗ trợ trong ít phút sau đó. Ngoài ra, ngay chính các học viên trong khóa học cũng có thể tham gia hỗ trợ lẫn nhau nên bạn hãy yên tâm nhé!
+    </div>
+  </div>
+
+</body>
+</html>
