@@ -1,0 +1,490 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-image: url("https://images.unsplash.com/photo-1579547621706-1a9c79d5c9f1?q=80&w=2070&auto=format&fit=crop");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container-1 {
+  width: 1300px;
+  height: 1000px;
+  background-color: rgb(255, 255, 255);
+  margin-left: 50px;
+  margin-right: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 50px;
+}
+.main-title {
+  font-size: 64px;
+  color: #1e293b;
+  text-align: center;
+}
+
+.sub-title {
+  color: #c084fc;
+}
+
+.desc {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.start-btn {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #a855f7;
+  border-radius: 20px;
+  color: white;
+  font-size: 16px;
+  margin-left: 500px;
+  cursor: pointer;
+}
+
+.logo-container {
+  margin-top: 40px;
+}
+.logo-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid rgba(192, 132, 252, 0.6);
+  margin-left: 650px;
+}
+
+.container-content {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.number {
+  color: #bc80f9;
+}
+.container-checkbox {
+  display: inline-block;
+  margin-left: 560px;
+  margin-top: 20px;
+}
+
+.checkbox {
+  display: inline-block;
+}
+
+.switch {
+  display: inline-block;
+}
+
+.container-2 {
+  width: 95%;
+  background-color: rgb(235, 235, 235);
+  margin-left: 30px;
+  margin-top: 10px;
+  line-height: 1.6;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 8px;
+}
+
+.reminder {
+  font-weight: bold;
+}
+
+.container-3-1 {
+  margin-top: 10px;
+}
+
+.check-img {
+  width: 20px;
+  height: 20px;
+  display: inline-block; 
+  vertical-align: middle;
+}
+
+.ckeck-content {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+
+.container-3-1,
+.container-3-2,
+.container-3-3 {
+  display: inline-block;
+  margin-left: 100px;
+}
+
+.advise-btn {
+  padding: 10px 20px 10px 20px;
+  background-color: rgb(255, 123, 0);
+  border-radius: 20px;
+  color: white;
+  margin-left: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.overlay {
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  line-height: 1.6;
+  border-radius: 16px;
+  position: relative;
+  top: -800px;
+  left: 555px;
+  visibility: hidden;
+}
+
+.overlay-title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+.overlay-content {
+  font-size: 10px;
+  margin-left: 40px;
+}
+
+.overlay-container {
+  font-size: 12px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.overlay-container-content {
+  display: inline-block;
+}
+
+button {
+  padding: 10px 85px;
+  margin-top: 10px;
+  margin-left: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #a855f7;
+  color: white;
+}
+
+.close-btn {
+  float: right;
+  margin-top: -10px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#startLearningModal:checked ~ .overlay {
+  visibility: visible;
+}
+
+.overlay-1 {
+  width: 400px;
+  height: 600px;
+  background-color: white;
+  position: relative;
+  top: -1100px;
+  left: 500px;
+  visibility: hidden;
+}
+.heading {
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 120px;
+}
+
+.sub-heading {
+  margin-top: 5px;
+  color: rgb(95, 95, 95);
+  margin-left: 40px;
+}
+
+.name-box {
+  margin-left: 15px;
+}
+.name {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.star {
+  color: red;
+}
+
+.name-box input {
+  padding-left: 10px;
+  padding-right: 180px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: 1px solid rgb(201, 198, 198);
+  background-color: rgb(222, 222, 222);
+  border-radius: 2px;
+}
+
+.note {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  background-color: rgb(62, 62, 62);
+  color: white;
+  position: absolute;
+  top: 25px;
+  visibility: hidden;
+  border-radius: 6px;
+}
+
+.name-box input:hover + .note {
+  visibility: visible;
+}
+
+.note-2 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  background-color: rgb(62, 62, 62);
+  color: white;
+  position: absolute;
+  top: 80px;
+  visibility: hidden;
+  border-radius: 6px;
+}
+
+.name-box input:hover + .note-2 {
+  visibility: visible;
+}
+
+.note-3 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  background-color: rgb(62, 62, 62);
+  color: white;
+  position: absolute;
+  top: 140px;
+  visibility: hidden;
+  border-radius: 6px;
+}
+
+.name-box input:hover + .note-3 {
+  visibility: visible;
+}
+
+.con-checkbox {
+  margin-top: 40px;
+  margin-left: 15px;
+}
+
+.con-checkbox p {
+  position: absolute;
+  padding: 10px 5px 10px 5px;
+  background-color: rgb(62, 62, 62);
+  color: white;
+  border-radius: 6px;
+  top: 235px;
+  left: 20px;
+  visibility: hidden;
+}
+
+.con-checkbox input:hover + p {
+  visibility: visible;
+}
+
+.con-checkbox-1 {
+  margin-top: 40px;
+  margin-left: 15px;
+}
+
+.con-checkbox-1 p {
+  position: absolute;
+  padding: 10px 5px 10px 5px;
+  background-color: rgb(62, 62, 62);
+  color: white;
+  border-radius: 6px;
+  top: 290px;
+  left: 20px;
+  visibility: hidden;
+}
+
+.con-checkbox-1 input:hover + p {
+  visibility: visible;
+}
+
+.con-checkbox-2 {
+  margin-top: 40px;
+  margin-left: 15px;
+}
+
+.con-checkbox-2 p {
+  position: absolute;
+  padding: 10px 5px 10px 5px;
+  background-color: rgb(62, 62, 62);
+  color: white;
+  border-radius: 6px;
+  top: 345px;
+  left: 20px;
+  visibility: hidden;
+}
+
+.con-checkbox-2 input:hover + p {
+  visibility: visible;
+}
+
+.con-checkbox-3 {
+  margin-top: 40px;
+  margin-left: 15px;
+}
+
+.con-checkbox-3 p {
+  position: absolute;
+  padding: 10px 5px 10px 5px;
+  background-color: rgb(62, 62, 62);
+  color: white;
+  border-radius: 6px;
+  top: 400px;
+  left: 20px;
+  visibility: hidden;
+}
+
+.con-checkbox-3 input:hover + p {
+  visibility: visible;
+}
+
+.con-checkbox-4 {
+  margin-top: 40px;
+  margin-left: 15px;
+}
+
+.con-checkbox-4 p {
+  position: absolute;
+  padding: 10px 5px 10px 5px;
+  background-color: rgb(62, 62, 62);
+  color: white;
+  border-radius: 6px;
+  top: 460px;
+  left: 20px;
+  visibility: hidden;
+}
+
+.con-checkbox-4 input:hover + p {
+  visibility: visible;
+}
+
+.register-btn {
+  margin-left: 35px;
+  margin-top: 20px;
+  border-radius: 16px;
+  background-color: rgb(211, 81, 22);
+}
+
+.close-btn-re {
+  float: right;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#registerModal:checked ~ .overlay-1 {
+  visibility: visible;
+}
+
+.question-container {
+  /* width: 1000px;
+  margin-left: 150px;
+  height: 1000px; */
+  position: relative;
+}
+.question-title {
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.question {
+  padding-left: 20px;
+  padding-right: 600px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #c6c4c8;
+  margin-top: 20px;
+  display: inline-block;
+  border-radius: 8px;
+  margin-left: 160px;
+  position: relative;
+  font-weight: bold;
+}
+
+.icon {
+  right: 15px;
+  position: absolute;
+  top: 15px;
+  font-weight: bold;
+}
+
+.question .icon::before {
+  content: "+";
+  font-weight: bold;
+}
+
+#q1:checked + .question .icon::before {
+  content: "-";
+}
+.answer {
+  background: #d0d0d0;
+  margin-top: 10px;
+  padding: 0 20px;
+  border-radius: 12px;
+  font-size: 18px;
+  line-height: 1.6;
+  max-height: 0;
+  overflow: hidden;
+  margin-top: 0;
+  margin-left: 160px;
+  margin-right: 170px;
+}
+
+#q1:checked ~ .answer {
+  max-height: 500px; 
+  padding: 20px;
+}
+
+.question-2  {
+  padding-right: 32px;
+}
+
+#q2:checked + .question .icon::before {
+  content: "-";
+}
+
+#q2:checked ~ .answer {
+  max-height: 500px; 
+  padding: 20px;
+}
+
+.question-3  {
+  padding-right: 97px;
+}
+
+#q3:checked + .question .icon::before {
+  content: "-";
+}
+
+#q3:checked ~ .answer {
+  max-height: 500px; 
+  padding: 20px;
+}
