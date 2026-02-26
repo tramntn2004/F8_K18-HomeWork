@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input id="todoInput">
+<button id="add">Add</button>
+
+<br><br>
+
+<input id="search" placeholder="Search todo">
+<label>
+  <input type="checkbox" id="filterDone"> Done
+</label>
+
+<ul id="list"></ul>
+
+<script>
+  const input = document.getElementById("todoInput");
+  const addBtn = document.getElementById("add");
+  const ul = document.getElementById("list");
+  const search = document.getElementById("search");
+  const filterDone = document.getElementById("filterDone");
+
+  addBtn.onclick = function () {
+    if (input.value === "") return;
+
+    const li = document.createElement("li");
+
+    const text = document.createElement("span");
+    text.innerText = input.value;
+
+    const done = document.createElement("button");
+    done.innerText = "Done";
+    done.style.background = "yellow";
+    let isDone = false;
+
+    done.onclick = function () {
+      isDone = !isDone;
+      done.style.background = isDone ? "green" : "yellow";
+      li.setAttribute("data-done", isDone);
+    };
+
+    const del = document.createElement("button");
+    del.innerText = "Delete";
+    del.style.background = "red";
+    del.onclick = function () {
+      ul.removeChild(li);
+    };
+
+    li.appendChild(text);
+    li.appendChild(done);
+    li.appendChild(del);
+    ul.appendChild(li);
+
+    input.value = "";
+  };
+
+  function filter() {
+    const items = ul.querySelectorAll("li");
+
+    items.forEach(li => {
+      const text = li.querySelector("span").innerText.toLowerCase();
+      const done = li.getAttribute("data-done") === "true";
+
+      if (
+        text.includes(search.value.toLowerCase()) &&
+        (!filterDone.checked || done)
+      ) {
+        li.style.display = "block";
+      } else {
+        li.style.display = "none";
+      }
+    });
+  }
+
+  search.oninput = filter;
+  filterDone.onchange = filter;
+</script>
+
+</body>
+</html>

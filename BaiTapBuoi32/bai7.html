@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="list"></ul>
+<button id="add">Add</button>
+
+<script>
+  const ul = document.getElementById("list");
+  const btn = document.getElementById("add");
+
+  btn.onclick = function () {
+    const li = document.createElement("li");
+    const span = document.createElement("span");
+    span.innerText = "Todo item";
+
+    span.onclick = function () {
+      span.style.textDecoration =
+        span.style.textDecoration === "line-through"
+          ? "none"
+          : "line-through";
+    };
+
+    const del = document.createElement("button");
+    del.innerText = "Delete";
+    del.onclick = function () {
+      ul.removeChild(li);
+    };
+
+    li.appendChild(span);
+    li.appendChild(del);
+    ul.appendChild(li);
+  };
+</script>
+
+</body>
+</html>
