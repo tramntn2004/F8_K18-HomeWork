@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function createOrder(product) {
+      console.log("Đang tạo đơn hàng...");
+
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve({
+            orderId: 999,
+            productName: product.name,
+            status: "SUCCESS"
+          });
+        }, 1000);
+      });
+    }
+    checkStock(1)
+      .then(product => {
+        console.log("Tồn kho hợp lệ");
+        return processPayment(product).then(() => product);
+      })
+      .then(product => {
+        console.log("Thanh toán thành công");
+        return createOrder(product);
+      })
+      .then(order => {
+        console.log("Đặt hàng thành công!");
+        console.log("Order:", order);
+      })
+      .catch(error => {
+        console.log("Lỗi:", error);
+      });
+  </script>
+</body>
+</html>
