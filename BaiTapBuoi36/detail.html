@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Chi tiết bài viết</h1>
+
+<div id="detail"></div>
+
+<button onclick="goBack()">Back</button>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script>
+const API = "https://dummyjson.com/posts";
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+
+async function fetchDetail() {
+    const res = await axios.get(`${API}/${id}`);
+    const post = res.data;
+
+    document.getElementById("detail").innerHTML = `
+        <h2>${post.title}</h2>
+        <p>${post.body}</p>
+    `;
+}
+
+
+function goBack() {
+    window.history.back();
+}
+
+fetchDetail();
+</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Danh sách Post</h1>
+
+<button onclick="createPost()">Thêm bài viết</button>
+
+<ul id="postList"></ul>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script>
+const API = "https://dummyjson.com/posts";
+let posts = [];
+
+
+async function fetchPosts() {
+    const res = await axios.get(API);
+    posts = res.data.posts;
+    renderPosts();
+}
+
+
+function renderPosts() {
+    const list = document.getElementById("postList");
+    list.innerHTML = "";
+
+    posts.forEach(post => {
+        const li = document.createElement("li");
+
+        li.innerHTML = `
+            ${post.title}
+            <button onclick="goDetail(${post.id})">Chi tiết</button>
+            <button onclick="editPost(${post.id})">Sửa</button>
+            <button onclick="deletePost(${post.id})">Xoá</button>
+        `;
+
+        list.appendChild(li);
+    });
+}
+
+
+function goDetail(id) {
+    window.location.href = `detail.html?id=${id}`;
+}
+
+
+async function createPost() {
+    const title = prompt("Nhập tiêu đề bài viết:");
+
+    if (!title) return;
+
+    const res = await axios.post(API + "/add", {
+        title: title,
+        userId: 1
+    });
+
+    posts.unshift(res.data);
+    renderPosts();
+}
+
+
+async function editPost(id) {
+    const post = posts.find(p => p.id === id);
+
+    const newTitle = prompt("Sửa tiêu đề:", post.title);
+
+    if (!newTitle) return;
+
+    const res = await axios.put(`${API}/${id}`, {
+        title: newTitle
+    });
+
+    const index = posts.findIndex(p => p.id === id);
+    posts[index] = res.data;
+
+    renderPosts();
+}
+
+
+async function deletePost(id) {
+    const confirmDelete = confirm("Bạn chắc chắn muốn xoá?");
+
+    if (!confirmDelete) return;
+
+    await axios.delete(`${API}/${id}`);
+
+    posts = posts.filter(p => p.id !== id);
+    renderPosts();
+}
+
+
+fetchPosts();
+</script>
+</body>
+</html>
